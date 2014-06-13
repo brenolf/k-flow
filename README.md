@@ -12,6 +12,6 @@ Tutte[1]  defined   the   concept  of   _k_-flows   as   a generalization of  th
 
 ## Usage
 
-One may use `kflow.py` as a standalone library. Its main function (and actually the only one which should be ever called by the client-side) is `has_k_flow` which takes as its two mandatory arguments (the number `k` representing which of the flows (3, 4, 5) should be used and a graph represented by an adjacency list) and returns a boolean value telling if the graph has or does not have a _k_-flow. If there is a flow, it is accessible through `kflow.answer`, which is a list of possible found _k_-flows; However, if there is a _k_-flow, `kflow.answer` will only have the first found _k_-flow.
+One may use `kflow.py` as a standalone library. Its main function (and actually the only one which should be called by the client-side) is `has_k_flow` which takes as its two mandatory arguments the number `k` representing which of the flows (3, 4, 5 should be used and a graph `G` represented by an adjacency list. The function returns a boolean value that is `True`  if the graph admits a modular-_k_-flow. If there is a flow, it is accessible through `kflow.answer`, which is a list of possibles _k_-flows found; However, as a current limitation, if there is a modular-_k_-flow, `kflow.answer` will only have the first found _k_-flow.
 
 The file `go.py` is an example of how to read a graph from input and use the _kflow_ library.
